@@ -40,7 +40,6 @@ partial class Compiler
 		/// If true, we'll compile with /unsafe. This means that the package won't be able to
 		/// be published on the platform.
 		/// </summary>
-		[JsonIgnore]
 		public bool Unsafe { get; set; } = false;
 
 		public ReleaseMode ReleaseMode { get; set; }
