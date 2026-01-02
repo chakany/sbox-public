@@ -39,6 +39,8 @@ internal partial class Project
 		}
 		sb.AppendLine( $"	</PropertyGroup>" );
 		sb.AppendLine( $"" );
+		sb.AppendLine( $"	<Import Project=\"$(MSBuildThisFileDirectory)$(MSBuildThisFileName).user.props\" Condition=\"Exists('$(MSBuildThisFileDirectory)$(MSBuildThisFileName).user.props')\" />" );
+		sb.AppendLine( $"" );
 
 		if ( IsUnitTestProject )
 		{
